@@ -1,21 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Karla:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Aplicando as fontes */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+  color: #000;
+  font-family: 'Inconsolata', monospace;
+}
+
+/* Fonte para títulos */
+h1, h2, h3 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Ajuste de tamanho dos títulos */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Links estilizados */
+a {
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+/* Animação nos cards */
+.card {
+  border: 2px solid black;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
