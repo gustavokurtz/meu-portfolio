@@ -1,5 +1,5 @@
-import { FaJs, FaReact, FaNodeJs, FaVuejs, FaHtml5, FaCss3, FaDatabase } from "react-icons/fa";
-import { SiNextdotjs, SiNestjs, SiExpress, SiMysql, SiPostgresql, SiPrisma } from "react-icons/si";
+import { FaJs, FaReact, FaNodeJs, FaVuejs, FaHtml5, FaCss3, FaDatabase, FaJava, FaDocker } from "react-icons/fa";
+import { SiNextdotjs, SiNestjs, SiExpress, SiMysql, SiPostgresql, SiPrisma, SiMongodb, SiTypescript, SiRedis, SiGraphql, SiRabbitmq, SiSpringboot } from "react-icons/si";
 
 const techs = [
   { icon: FaJs, name: "JavaScript" },
@@ -14,6 +14,14 @@ const techs = [
   { icon: SiMysql, name: "MySQL" },
   { icon: SiPostgresql, name: "PostgreSQL" },
   { icon: SiPrisma, name: "Prisma" },
+  { icon: FaJava, name: "Java" },
+  { icon: SiSpringboot, name: "Spring Boot" },
+  { icon: SiMongodb, name: "MongoDB" },
+  { icon: FaDocker, name: "Docker" },
+  { icon: SiTypescript, name: "TypeScript" },
+  { icon: SiRedis, name: "Redis" },
+  { icon: SiGraphql, name: "GraphQL" },
+  { icon: SiRabbitmq, name: "RabbitMQ" }
 ];
 
 export default function Technologies() {
