@@ -25,7 +25,7 @@ export default function Home() {
         <p className="text-lg md:text-xl leading-relaxed">
           Sou um desenvolvedor fullstack apaixonado por resolver problemas através da tecnologia. 
           Programo desde os 16 anos, sempre buscando novas maneiras de criar, aprender e inovar. 
-          Tenho experiência em <strong>Java (Spring Boot), JavaScript, React, Next.js, Node.js, Vue.js, HTML, CSS, Prisma, Nest.js, Express, Python, MySQL e PostgreSQL</strong>.
+          Tenho experiência em <strong>Java (Spring Boot), JavaScript, HTML, CSS, TypeScript, React, Next.js, Node.js, Vue.js, Prisma, Nest.js, Express, Python, Docker, Redis, MongoDB, MySQL e PostgreSQL</strong>.
         </p>
 
         <p className="text-lg md:text-xl leading-relaxed mt-4">
