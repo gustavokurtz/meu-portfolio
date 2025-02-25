@@ -13,6 +13,13 @@ const projects = [
     tech: ["Vue.js", "Flask", "Nginx", "FFmpeg", "Pydub"],
   },
   {
+    title: "Gerenciador de Eventos",
+    description: "Sistema para criar e gerenciar eventos de forma eficiente.",
+    link: "https://gerenciadoreventos.vercel.app/",
+    image: "/previews/gerenciadoreventos.png",
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Java (Spring Boot)"],
+  },
+  {
     title: "Hábitos Diários",
     description: "Sistema que entrega três hábitos diários automaticamente.",
     link: "https://habitosdiarios.vercel.app/",
