@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-
 const projects = [
   {
     title: "TranscrevaTube",
@@ -46,46 +45,58 @@ const projects = [
     image: "/previews/encurtador.png",
     tech: ["Next.js", "Node.js", "Express", "SQLite"],
   },
-  {
+   {
     title: "Medite",
-    description: "Plataforma para meditação e mindfulness.",
+    description: "Plataforma para meditação e mindfulness",
     link: "https://medite.vercel.app/",
     image: "/previews/medite.png",
-    tech: ["Next.js", "Tailwind CSS"],
+    tech: ["Next.js, TailwindCSS"],
   },
 ];
-
 export default function Projects() {
   return (
-    <div>
-      <h2>Meus Projetos</h2>
-      <div>
+    
+      
+
+Meus Projetos
+
+
+      
+
+
         {projects.map((project, index) => {
           const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
           return (
-            <motion.div
-              key={index}
-              ref={ref}
-              initial={{ opacity: 0, translateY: 50 }}
-              animate={inView ? { opacity: 1, translateY: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
+            
               {/* Imagem com bordas arredondadas */}
-              <img src={project.image} alt={project.title} style={{ borderRadius: "8px" }} />
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div>
+              
+              
+
+{project.title}
+
+
+              
+
+{project.description}
+
+
+              
+
+
                 {project.tech.map((tech, i) => (
-                  <span key={i}>{tech}</span>
+                  
+                    {tech}
+                  
                 ))}
-              </div>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                Ver Projeto
-              </a>
-            </motion.div>
+              
+
+
+            
           );
         })}
-      </div>
-    </div>
+      
+
+
+    
   );
 }
