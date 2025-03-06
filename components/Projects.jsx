@@ -1,7 +1,9 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+
 const projects = [
   {
     title: "TranscrevaTube",
@@ -45,7 +47,7 @@ const projects = [
     image: "/previews/encurtador.png",
     tech: ["Next.js", "Node.js", "Express", "SQLite"],
   },
-   {
+  {
     title: "Medite",
     description: "Plataforma para meditação e mindfulness",
     link: "https://medite.vercel.app/",
@@ -53,50 +55,51 @@ const projects = [
     tech: ["Next.js, TailwindCSS"],
   },
 ];
+
 export default function Projects() {
   return (
-    
-      
-
-Meus Projetos
-
-
-      
-
-
+    <motion.section
+      className="p-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <h2 className="text-4xl font-bold text-center mb-8">Meus Projetos</h2>
+      <div className="flex flex-col gap-8">
         {projects.map((project, index) => {
           const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
           return (
-            
+            <motion.a
+              key={index}
+              ref={ref}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg overflow-hidden shadow-lg bg-white border-2 border-black p-8 flex flex-col items-center transition-transform duration-300 hover:shadow-xl"
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+            >
               {/* Imagem com bordas arredondadas */}
-              
-              
-
-{project.title}
-
-
-              
-
-{project.description}
-
-
-              
-
-
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-auto max-w-md object-cover rounded-xl mb-6"
+              />
+              <h3 className="text-2xl font-bold">{project.title}</h3>
+              <p className="text-lg text-gray-700 text-center">{project.description}</p>
+              <div className="flex flex-wrap mt-4 gap-3 justify-center">
                 {project.tech.map((tech, i) => (
-                  
+                  <span key={i} className="px-3 py-2 text-sm border border-black rounded-lg">
                     {tech}
-                  
+                  </span>
                 ))}
-              
-
-
-            
+              </div>
+            </motion.a>
           );
         })}
-      
-
-
-    
+      </div>
+    </motion.section>
   );
 }
